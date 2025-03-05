@@ -1,0 +1,286 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Added Montserrat font */
+:root {
+    --primary-color: #ff1e1e;
+    --secondary-color: #1e1e1e;
+    --accent-color: #f0f0f0;
+    --text-color: #333333;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Updated to use Montserrat font */
+    line-height: 1.6;
+    color: white; /* Changed text color for dark theme */
+    background-color: #121212; /* Set background color for dark theme */
+}
+
+/* Navigation */
+.navbar {
+    background: #1e1e1e; /* Updated navbar background for dark theme */
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Center logo vertically */
+    margin-right: 20px; /* Add space to the right of the logo */
+}
+
+.nav-brand img {
+    height: 50px; /* Set uniform height for logo */
+    margin-right: 10px; /* Add margin to separate logo from text */
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 2px;
+    transition: var(--transition-speed);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #f0f0f0; /* Updated link color for dark theme */
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: #2a2a2a; /* Updated feature card background for dark theme */
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform var(--transition-speed);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Team Stats */
+.team-stats {
+    background: var(--secondary-color);
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    color: #ff1e1e; /* Updated stat number color for dark theme */
+    display: block;
+}
+
+/* BTS Page Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.gallery-item {
+    background: #2a2a2a; /* Updated gallery item background for dark theme */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Pit Display Styles */
+.pit-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.pit-stat-card {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-time {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    display: block;
+    margin: 1rem 0;
+}
+
+/* Merchandise Page Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background: #2a2a2a; /* Updated product card background for dark theme */
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.add-to-cart {
+    background: #ff1e1e; /* Updated button background for dark theme */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.add-to-cart:hover {
+    background: darkred;
+}
+
+/* Footer */
+footer {
+    background: #1e1e1e; /* Updated footer background for dark theme */
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.social-links a {
+    color: #f0f0f0; /* Updated social link color for dark theme */
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--secondary-color);
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-grid,
+    .stats-grid,
+    .gallery-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

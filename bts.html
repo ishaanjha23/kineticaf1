@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind The Scenes - Kinetica F1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">KINETICA</span>
+            <span class="logo-f1">F1</span>
+        </div>
+        <div class="nav-toggle">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bts.html" class="active">Behind The Scenes</a></li>
+            <li><a href="pit.html">Pit Display</a></li>
+            <li><a href="merch.html">Merchandise</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Behind The Scenes</h1>
+        <p>Experience the heart of Kinetica F1</p>
+    </header>
+
+    <main>
+        <section class="gallery-section">
+            <h2>Factory Tour Gallery</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-title="Wind Tunnel Testing">
+                    <img src="https://via.placeholder.com/400x300" alt="Wind Tunnel">
+                    <div class="gallery-overlay">
+                        <span>Wind Tunnel Testing</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-title="Manufacturing">
+                    <img src="https://via.placeholder.com/400x300" alt="Manufacturing">
+                    <div class="gallery-overlay">
+                        <span>Carbon Fiber Manufacturing</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-title="Race Control">
+                    <img src="https://via.placeholder.com/400x300" alt="Race Control">
+                    <div class="gallery-overlay">
+                        <span>Race Control Center</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>Featured Videos</h2>
+            <div class="video-player">
+                <video id="mainVideo" poster="https://via.placeholder.com/1280x720">
+                    <source src="path-to-your-video.mp4" type="video/mp4">
+                </video>
+                <div class="video-controls">
+                    <button id="playPause"><i class="fas fa-play"></i></button>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <button id="volumeControl"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="virtual-tour">
+            <h2>Virtual Tour</h2>
+            <div class="tour-container">
+                <div class="tour-navigation">
+                    <button class="tour-point active" data-area="entrance">Main Entrance</button>
+                    <button class="tour-point" data-area="factory">Factory Floor</button>
+                    <button class="tour-point" data-area="engineering">Engineering Bay</button>
+                </div>
+                <div class="tour-view" id="tourView">
+                    <div class="tour-scene active" data-scene="entrance">
+                        <img src="https://via.placeholder.com/1200x600" alt="Main Entrance">
+                        <div class="hotspot" data-tooltip="Reception Area"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-image" src="" alt="">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c55525a537c5755525948555f5d5a0d125f5351">[email&#160;protected]</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kinetica F1. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="gallery.js"></script>
+</body>
+</html>

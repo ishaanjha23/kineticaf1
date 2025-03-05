@@ -1,0 +1,480 @@
+/* Components CSS - Advanced styling for Kinetica F1 website components */
+
+/* Gallery and Lightbox */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox.active {
+    opacity: 1;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 4px;
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Custom Video Player */
+.video-player {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-player video {
+    width: 100%;
+    display: block;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-player:hover .video-controls {
+    opacity: 1;
+}
+
+.video-controls button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 2px;
+    width: 0;
+}
+
+/* Pit Display Components */
+.pit-display {
+    padding-top: 80px;
+}
+
+.car-stats {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    background: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.stat-unit {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Pit Stop Simulation */
+.pit-simulation {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem;
+    text-align: center;
+}
+
+.car-model {
+    width: 300px;
+    height: 150px;
+    background: #333;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.wheel {
+    width: 40px;
+    height: 40px;
+    background: #666;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.wheel.changed {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+#wheel-fl { top: 20px; left: 20px; }
+#wheel-fr { top: 20px; right: 20px; }
+#wheel-rl { bottom: 20px; left: 20px; }
+#wheel-rr { bottom: 20px; right: 20px; }
+
+/* Timing Board */
+.timing-board {
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.timing-header {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+    padding: 1rem;
+    background: var(--accent-color);
+    font-weight: bold;
+}
+
+.timing-row {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.team-driver {
+    background: rgba(255, 0, 102, 0.1);
+}
+
+/* Shop Components */
+.shop {
+    padding-top: 80px;
+}
+
+.filters {
+    background: var(--accent-color);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.filter-container {
+    display: flex;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-container select {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 1rem;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.product-actions {
+    padding: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.quick-view-btn,
+.add-to-cart-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quick-view-btn {
+    background: var(--accent-color);
+    color: white;
+}
+
+.add-to-cart-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart-items {
+    padding: 1rem;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-footer {
+    padding: 1rem;
+    background: #f8f8f8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Quick View Modal */
+.quick-view-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .video-controls {
+        padding: 0.5rem;
+    }
+
+    .stats-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.add-to-cart-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    animation: slideIn 0.3s ease, fadeIn 0.3s ease;
+}
