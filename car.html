@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetica F1 Team - Car</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <style>
+        /* Add custom styles for the car model */
+        .car-container {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .car-model {
+            transition: transform 0.3s;
+        }
+        .car-model:hover {
+            transform: scale(1.05);
+        }
+
+        #lol{
+            width:1000px;
+            height: 600px;
+            margin-left: 130px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">KINETICA F1</div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bts.html">Behind The Scenes</a></li>
+            <li><a href="pit.html">Pit Display</a></li>
+            <li><a href="merch.html">Merchandise</a></li>
+            <li><a href="car.html" class="active">Car</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Kinetica F1 Car Model</h1>
+            <p>Explore our 3D model of the car!</p>
+            <p>*We don't reccomend using this page on your mobile phones*</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="car-container">
+            <h2>3D Car Model</h2>
+            <div id="carModel" class="car-model"></div>
+            <model-viewer id ="lol" src="car.glb" autoplay camera-controls></model-viewer>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@kineticaf1.com">info@kineticaf1.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kinetica F1 Team. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="pit-display.js"></script>
+    
+</body>
+</html>
